@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HomePage from './HomePage';
-
+import {store} from './redux';
+import {Provider} from 'react-redux';
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <HomePage />
+      </div>
+    </Provider>
   );
 }
 

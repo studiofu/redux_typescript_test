@@ -10,10 +10,12 @@ const initialState: IIssueInitialState = {
 }
 
 // Part 3
+// Name of your slice, initial state, and reducers
 export const issueSlice = createSlice({
-    name: 'issue',
-    initialState,
-    reducers: {
+    name: 'issue', 
+    initialState, 
+    reducers: { 
+        // PayloadAction<string> is the type of the "payload" field
         addIssue: (state, action: PayloadAction<string>) => {
             state.projectIssues = [...state.projectIssues, action.payload]
         }
